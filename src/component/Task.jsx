@@ -15,7 +15,7 @@ export default function Task({task,index,deleteTask,todos}) {
       if (oneTodo.id === id) {
         console.log(id);
         oneTodo.title = todo.title;
-        oneTodo.descripton = todo.description;
+        oneTodo.description = todo.description;
       }
       return oneTodo;
     });
@@ -23,6 +23,8 @@ export default function Task({task,index,deleteTask,todos}) {
     setTodo(editedList);
     handleEdit();
     console.log(todo, id);
+    console.log(editedList);
+
   };
 
   return (
@@ -44,8 +46,8 @@ export default function Task({task,index,deleteTask,todos}) {
 
          <input
             type="text"
-            value={todo.descripton}
-            name="todo-descripton"
+            value={todo.description}
+            name="todo-description"
             onChange={(e) => setTodo({ ...todo, description: e.target.value })}
           />
           <button onClick={handleEdit}>Cancel</button>
