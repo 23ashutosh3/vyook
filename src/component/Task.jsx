@@ -10,7 +10,7 @@ export default function Task({todo,task,index,deleteTask}) {
 	  <p>{todo}</p>
     <p>{task}</p>
     <button onClick={() => deleteTask(index)}>X</button> 
-    <button onClick={()=>handleModal()}>edit</button> 
+    {/*<button onClick={()=>handleModal()}>edit</button> */}
      </div>
   );
 }
