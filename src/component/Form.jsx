@@ -16,6 +16,8 @@ function Form() {
 	 const handleDelete = (index) => {
 		todos.splice(index, 1);
 		setTodos([...todos]);
+		localStorage.setItem("items", JSON.stringify([...todos]));
+
 	  };
 
 	  const handleSubmit = (e) => {
@@ -27,7 +29,7 @@ function Form() {
 		let todoObject = {
 		  id: todos.length + 1,
 		  title:todo.title,
-		  task: todo.description,
+		  description: todo.description,
 		  completed: false,
 		};
 		localStorage.setItem("items", JSON.stringify([...todos, todoObject]));

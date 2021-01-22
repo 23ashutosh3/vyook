@@ -4,10 +4,10 @@ import Task from "./Task";
  function Todos({todos,deleteTask}) {
 	//const { todos } = props;
 	return todos.map((task, index) => ( <
-        Task todo = { task.title }
-        task={ task.task }
+        Task task = { task}
         key = { index }
         index = { index }
+        todos={todos}
         deleteTask = { deleteTask }
         />
     ));
