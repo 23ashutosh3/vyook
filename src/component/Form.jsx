@@ -45,7 +45,7 @@ function Form() {
 		<br/>
 		<textarea id="Discription" placeholder="Discription..." rows="4" cols="50" onChange={(e) => setTodo({ ...todo, description: e.target.value })}></textarea>
 		<br/><br/>
-		<button className="button button1">Green</button>
+		<button className="button button1">Submit</button>
 		</form>
 		<Todos 
 		 setTodos={setTodos}

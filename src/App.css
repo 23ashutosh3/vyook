@@ -1,5 +1,6 @@
 .App {
     width: 100%;
+    height: 1200px;
     background-image: url("white-floor.jpg");
 }
 
@@ -8,15 +9,14 @@
     width: 60%;
     text-align: center;
     margin: auto;
-    /*margin-top: 10%;*/
 }
 
 .title {
     height: auto;
     width: 45%;
-    /*text-align: center;*/
     margin: auto;
     margin-top: 5%;
+    color: black;
 }
 
 .button {
@@ -33,9 +33,21 @@
 }
 
 .button1 {
-    background-color: white;
+    background-color: orange;
     color: black;
     border: 2px solid #4CAF50;
+}
+
+.buttonx {
+    background-color: #4CAF50;
+    color: black;
+    border: 2px solid #4CAF50;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 18px 2px;
 }
 
 .button1:hover {
@@ -46,27 +58,107 @@
 .todoList {
     height: 100px;
     margin-top: 2px;
-    width: 60%;
-    margin-left: 19%;
+    width: 52%;
+    margin-left: 29%;
     border-bottom-right-radius: 1%;
     border-top-left-radius: 1%;
     text-align: auto;
-    background-color: rgb(250, 235, 220);
+    background-color: rgb(212, 206, 207);
 }
 
-.todoList p {
-    /*height: 40px;*/
-    margin-top: 2px;
-    /*width: 60%;*/
-    margin-left: 5%;
-    /*border-bottom-right-radius: 1%;*/
-    /*border-top-left-radius: 1%;*/
+.heading {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.first {
+    height: 100%;
+    width: 70%;
+    background-color: rgb(206, 58, 83);
+}
+
+.second {
+    height: 100%;
+    width: 30%;
+    background-color: rgb(206, 58, 83);
+}
+
+.heading h6 {
+    margin-top: 10px;
+    margin-left: 15%;
     text-align: auto;
-    /*background-color: rgb(233, 232, 231);*/
+    /*display: inline-block;*/
+}
+
+.heading h4 {
+    /*margin-top: 10px;*/
+    margin-left: 15%;
+    text-align: auto;
+    display: inline-block;
+}
+
+input {
+    border: 0;
+    border-bottom: 3px solid rgb(17, 16, 16);
+    background: transparent;
+    width: 400px;
+    height: 45px;
+    padding: 3px 0 2 0;
+    font-size: 20px;
+    color: black;
 }
 
 
 /*.background {}*/
+
+@media only screen and (max-width: 720px) and (min-width: 320px) {
+    textarea {
+        height: calc(100% - 0.75em);
+        width: calc(100% - 0.75em);
+    }
+    .title {
+        height: auto;
+        width: 100%;
+        margin: auto;
+        margin-top: 5%;
+        color: black;
+    }
+    .todoList {
+        height: 70px;
+        margin-top: 2px;
+        width: 100%;
+        margin-left: 0%;
+        border-bottom-right-radius: 1%;
+        border-top-left-radius: 1%;
+        text-align: auto;
+        background-color: rgb(212, 206, 207);
+    }
+    .heading h6 {
+        margin-top: 4px;
+        margin-left: 1%;
+        text-align: auto;
+        /*display: inline-block;*/
+    }
+    .heading h4 {
+        /*margin-top: 10px;*/
+        margin-left: 1%;
+        text-align: auto;
+        display: inline-block;
+    }
+    .buttonx {
+        background-color: #4CAF50;
+        color: black;
+        border: 2px solid #4CAF50;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 1px;
+    }
+}
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {

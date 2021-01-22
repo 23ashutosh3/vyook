@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 export default function Task({task,index,deleteTask,todos}) {
-
-
     
   const [edit, setEdit] = useState(false);
   const [todo, setTodo] = useState({title:task.title,description:task.description});
@@ -30,30 +28,34 @@ export default function Task({task,index,deleteTask,todos}) {
   return (
     <div className="todoList">
       {!edit ?(
-        <> <p>{task.title}</p>
-    <p>{task.description}</p>
-    <button onClick={() => deleteTask(index)}>X</button> 
-    <button onClick={handleEdit} >
-            Edit
-          </button></>): (<>
-            {" "}
-          <input
-            type="text"
-            value={todo.title}
-            name="todo-title"
-            onChange={(e) => setTodo({ ...todo, title: e.target.value })}
-          />
 
-         <input
-            type="text"
-            value={todo.description}
-            name="todo-description"
-            onChange={(e) => setTodo({ ...todo, description: e.target.value })}
-          />
-          <button onClick={handleEdit}>Cancel</button>
-          <button type="submit" onClick={() => handleEditSubmit(task.id)}>
-            Save
+        <> 
+        <div className="heading">
+          <div className="first">
+          <h4 >{task.title}</h4>
+        <h6>{task.description}</h6>
+          </div>
+          <div className="second">
+          <button class="buttonx" onClick={() => deleteTask(index)}>X</button> 
+        <button class="buttonx" onClick={handleEdit} >Edit
           </button>
+          </div>
+       
+      
+   
+            
+          </div></>): (<>
+            {" "}
+            <div className="heading">  
+            <div className="first">
+            <input  type="text" value={todo.title} name="todo-title"  onChange={(e) => setTodo({ ...todo, title: e.target.value })} />
+            <input type="text" value={todo.description} name="todo-description" onChange={(e) => setTodo({ ...todo, description: e.target.value })}/>
+            </div>
+            <div className="second">
+            <button class="buttonx" onClick={handleEdit}>Cancel</button>
+            <button class="buttonx" type="submit" onClick={() => handleEditSubmit(task.id)}> Save</button>
+            </div>
+            </div>
           </>)
          }
 	 
